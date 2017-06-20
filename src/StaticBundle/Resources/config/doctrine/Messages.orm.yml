@@ -1,0 +1,31 @@
+StaticBundle\Entity\Messages:
+    type: entity
+    table: messages
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        message:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        user:
+            type: string
+            nullable: false
+            length: 100
+            options:
+                fixed: false
+        date:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+    lifecycleCallbacks: {  }

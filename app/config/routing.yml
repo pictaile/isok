@@ -1,5 +1,7 @@
 static:
+    type : rest
     resource: "@StaticBundle/Resources/config/routing.yml"
+    prefix : /
 
 #app:
 #    resource: '@AppBundle/Controller/'

@@ -1,3 +1,12 @@
 static_homepage:
-    path: /
-    defaults: { _controller: StaticBundle:Default:index }
+    type:     rest
+    name_prefix:  static_
+    resource : StaticBundle\Controller\DefaultController
+#    path: /
+#    defaults: { _controller: StaticBundle:Default:index }
+
+#chat_bundle:
+#    type: rest
+#    resource: StaticBundle\Controller\ChatController
+#    prefix: /api
+#    name_prefix:  static_

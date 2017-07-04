@@ -5,8 +5,16 @@ static_homepage:
 #    path: /
 #    defaults: { _controller: StaticBundle:Default:index }
 
-#chat_bundle:
-#    type: rest
-#    resource: StaticBundle\Controller\ChatController
-#    prefix: /api
-#    name_prefix:  static_
+chat_bundle:
+    type: rest
+    path:  /chat
+    resource: StaticBundle\Controller\ChatController
+
+#post_demo_chat:
+#    path:  /chat
+#    defaults: { _controller: StaticBundle:Chat:postMessage, _format: ~ }
+#
+#get_demo_chat:
+#    path:  /chat
+#    defaults: { _controller: StaticBundle:Chat:getMessage, _format: ~ }
+

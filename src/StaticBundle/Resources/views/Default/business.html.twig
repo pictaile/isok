@@ -1,0 +1,6 @@
+{% extends 'StaticBundle:Default:index.html.twig' %}
+
+{% block switchers %}
+    <a  href="/{% if app.environment == "dev" %}app_dev.php{% endif %}/business" class="btn btn-primary active" >Для ресторанов</a>
+    <a href="/{% if app.environment == "dev" %}app_dev.php{% endif %}"  class="btn btn-success " >Для клиентов</a>
+{% endblock %}

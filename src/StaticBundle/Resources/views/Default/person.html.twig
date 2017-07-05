@@ -1,0 +1,17 @@
+{% extends 'StaticBundle:Default:index.html.twig' %}
+
+{% block search %}
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Введите название ресторана" aria-describedby="basic-addon2">
+        <span class="input-group-addon" id="basic-addon2">Поиск</span>
+    </div>
+{% endblock %}
+
+{% block switchers %}
+
+    {{ app.environment }}
+    <a href="/{% if app.environment == "dev" %}app_dev.php{% endif %}/business" class="btn btn-primary" >Для ресторанов</a>
+    <a href="/{% if app.environment == "dev" %}app_dev.php{% endif %}"  class="btn btn-success active" > Для клиентов</a>
+{% endblock %}
+
+

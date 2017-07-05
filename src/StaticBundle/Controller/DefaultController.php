@@ -29,12 +29,26 @@ class DefaultController extends Controller
     public function indexAction()
     {
         $content = $this->twig->render(
-            'StaticBundle:Default:index.html.twig', [
+            'StaticBundle:Default:person.html.twig', [
             ]
         );
 
         return new Response($content);
 
         //return $this->render('default/index.html.twig');
+    }
+
+    /**
+     * @Rest\View()
+     * @Get("/business")
+     */
+    public function businessAction() {
+        $content = $this->twig->render(
+            'StaticBundle:Default:business.html.twig', [
+            ]
+        );
+
+        return new Response($content);
+
     }
 }

@@ -13,7 +13,7 @@ use StaticBundle\Entity\Messages;
 class ChatController extends Controller
 {
 
-    public function getUsersAction()
+    public function getChatsAction()
     {
         $request = Request::createFromGlobals();
         $content = $request->getContent();
@@ -22,7 +22,7 @@ class ChatController extends Controller
         return new JsonResponse(['status' => 'susasssdasdasdccess']);
     } // "post_users"    [GET] /users
 
-    public function postChatAction()
+    public function postChatsAction()
     {
         $request = Request::createFromGlobals();
         $content = $request->getContent();
@@ -30,6 +30,5 @@ class ChatController extends Controller
 
         return new JsonResponse(['status' => 'success']);
     } // "post_users"    [POST] /users
-
 
 }

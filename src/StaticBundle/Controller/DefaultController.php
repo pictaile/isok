@@ -11,6 +11,8 @@ use Symfony\Component\HttpFoundation\Response;
 
 class DefaultController extends Controller
 {
+    private $twig;
+
     /**
      * DefaultController constructor.
      * @param \Twig_Environment $twig
@@ -29,7 +31,7 @@ class DefaultController extends Controller
     public function indexAction()
     {
         $content = $this->twig->render(
-            'StaticBundle:Default:person.html.twig', [
+            'StaticBundle:Default:index.html.twig', [
             ]
         );
 
@@ -38,17 +40,4 @@ class DefaultController extends Controller
         //return $this->render('default/index.html.twig');
     }
 
-    /**
-     * @Rest\View()
-     * @Get("/business")
-     */
-    public function businessAction() {
-        $content = $this->twig->render(
-            'StaticBundle:Default:business.html.twig', [
-            ]
-        );
-
-        return new Response($content);
-
-    }
 }

@@ -5,10 +5,17 @@ static_homepage:
 #    path: /
 #    defaults: { _controller: StaticBundle:Default:index }
 
-chat_bundle:
+business_bundle:
     type: rest
-    path:  /chat
-    resource: StaticBundle\Controller\ChatController
+    prefix:  /business
+    name_prefix:  static_business
+    resource: StaticBundle\Controller\BusinessController
+
+client_bundle:
+    type: rest
+    prefix:  /client
+    name_prefix:  static_client
+    resource: StaticBundle\Controller\ClientController
 
 #post_demo_chat:
 #    path:  /chat

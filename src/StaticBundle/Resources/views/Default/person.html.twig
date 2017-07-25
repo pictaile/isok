@@ -8,10 +8,13 @@
 {% endblock %}
 
 {% block switchers %}
+    <a href="/{% if app.environment == "dev" %}app_dev.php{% endif %}/business/" class="btn btn-primary" >Для ресторанов</a>
+    <a href="/{% if app.environment == "dev" %}app_dev.php{% endif %}/client/"  class="btn btn-success active" > Для клиентов</a>
+{% endblock %}
 
-    {{ app.environment }}
-    <a href="/{% if app.environment == "dev" %}app_dev.php{% endif %}/business" class="btn btn-primary" >Для ресторанов</a>
-    <a href="/{% if app.environment == "dev" %}app_dev.php{% endif %}"  class="btn btn-success active" > Для клиентов</a>
+
+{% block content %}
+    222
 {% endblock %}
 
 

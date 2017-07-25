@@ -26,7 +26,7 @@
             <div class="header-wrapper">
                 <div class="logo-wrapper">
                     {% image '@StaticBundle/Resources/public/img/logo.png' %}
-                        <img src="{{ asset_url }}" alt="Example" />
+                        <a href="/{% if app.environment == "dev" %}app_dev.php{% endif %}"><img src="{{ asset_url }}" alt="Example" /></a>
                     {% endimage %}
                 </div>
 
@@ -35,19 +35,42 @@
                 </div>
 
                 <div class="switchers-wrapper">
-                    {% block switchers %}{% endblock %}
+                    {% block switchers %}
+                        <a href="/{% if app.environment == "dev" %}app_dev.php{% endif %}/business/" class="btn btn-primary" >Бизнесу</a>
+                        <a href="/{% if app.environment == "dev" %}app_dev.php{% endif %}/client/"  class="btn btn-success" > Частным лицам</a>
+                    {% endblock %}
                 </div>
 
             </div>
 
 
-            <div class="video-wrapper">
-                {% image '@StaticBundle/Resources/public/img/not-found.png' %}
-                <img src="{{ asset_url }}" alt="Example" />
-                {% endimage %}
+            <div class="main-content">
+                {% block content %}
+
+                    <div class="description-wrapper">
+                        Описание
+                    </div>
+
+                    <div class="video-wrapper">
+                        {% image '@StaticBundle/Resources/public/img/not-found.png' %}
+                        <img src="{{ asset_url }}" alt="Example" />
+                        {% endimage %}
+                    </div>
+
+                {% endblock %}
             </div>
 
+
+
         </div>
+
+
+        <div class="footer-wrapper">
+            <div class="our-contacts">Наши контакты:</div>
+            <p>Email: test@te.te </p>
+            <p>Телефон: +380971112233</p>
+        </div>
+
 
 
     </div>

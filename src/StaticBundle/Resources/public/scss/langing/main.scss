@@ -1,6 +1,7 @@
 .main-wrapper {
   width:1000px;
   margin:auto;
+  min-height: calc(100% - 60px);
 }
 
 .header-wrapper {
@@ -23,8 +24,16 @@
     }
   }
 
+
+
   .switchers-wrapper{
     font-size: 0;
+    .btn {
+      width: 110px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
     .btn-primary {
       border: none;
       background: $color-green;
@@ -62,10 +71,27 @@
   }
 }
 
+.main-content {
+  min-height: 300px;
+
+}
+
 
 .video-wrapper {
   width:100%;
   height:534px;;
   background: #d9d9d9;
   text-align: center ;
+}
+
+
+
+
+.footer-wrapper {
+  height: 60px;
+  border-top:1px solid red;
+  width:1000px;
+  margin: auto;
+
+
 }

@@ -18,7 +18,172 @@
 
 </head>
 
-<body>
+<body class="home">
+
+
+
+
+
+
+<!-- HEADER -->
+<header>
+    <div class="wrapper cf">
+
+        <div id="logo">
+            <div class="logo-wrapper">
+                {% image '@StaticBundle/Resources/public/img/logo.png' %}
+                <a href="/{% if app.environment == "dev" %}app_dev.php{% endif %}"><img src="{{ asset_url }}" alt="Example" /></a>
+                {% endimage %}
+            </div>
+        </div>
+
+        <!-- nav -->
+        <ul id="nav" class="sf-menu">
+            <li class="current-menu-item"><a href="index.html">ГЛАВНАЯ</a></li>
+            <li ><a href="index.html">БИЗНЕСУ</a></li>
+            <li><a href="blog.html">ЧАСТНЫМ ЛИЦАМ</a></li>
+
+        </ul>
+        <div id="combo-holder"></div>
+        <!-- ends nav -->
+
+
+
+
+
+
+
+
+    </div>
+</header>
+<!-- ENDS HEADER -->
+
+
+
+<div class="main-wrapper">
+
+
+    <!-- SLIDER -->
+    <div id="home-slider" class="lof-slidecontent">
+
+        <div class="preload"><div></div></div>
+
+        <!-- slider content -->
+        <div class="main-slider-content" >
+            <ul class="sliders-wrap-inner">
+                <li>
+                    <img src="img/dummies/slides/01.jpg" title="" alt="alt" />
+                    <div class="slider-description">
+                        <h4>Lorem ipsum dolor</h4>
+                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est...
+                            <a class="link" href="#">Read more </a>
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <img src="img/dummies/slides/02.jpg" title="" alt="alt" />
+                    <div class="slider-description">
+                        <h4>Lorem ipsum dolor</h4>
+                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est...
+                            <a class="link" href="#">Read more </a>
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <img src="img/dummies/slides/03.jpg" title="" alt="alt" />
+                    <div class="slider-description">
+                        <h4>Lorem ipsum dolor</h4>
+                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est...
+                            <a class="link" href="#">Read more </a>
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <img src="img/dummies/slides/04.jpg" title="" alt="alt" />
+                    <div class="slider-description">
+                        <h4>Lorem ipsum dolor</h4>
+                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est...
+                            <a class="link" href="#">Read more </a>
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <img src="img/dummies/slides/05.jpg" title="" alt="alt" />
+                    <div class="slider-description">
+                        <h4>Lorem ipsum dolor</h4>
+                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est...
+                            <a class="link" href="#">Read more </a>
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <img src="img/dummies/slides/06.jpg" title="" alt="alt" />
+                    <div class="slider-description">
+                        <h4>Lorem ipsum dolor</h4>
+                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est...
+                            <a class="link" href="#">Read more </a>
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <img src="img/dummies/slides/07.jpg" title="" alt="alt" />
+                    <div class="slider-description">
+                        <h4>Lorem ipsum dolor</h4>
+                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est...
+                            <a class="link" href="#">Read more </a>
+                        </p>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+        <!-- ENDS slider content -->
+
+        <!-- slider nav -->
+        <div class="navigator-content">
+            <div class="navigator-wrapper">
+                <ul class="navigator-wrap-inner">
+                    <li><img src="img/dummies/slides/01_thumb.jpg" alt="alt" /></li>
+                    <li><img src="img/dummies/slides/02_thumb.jpg" alt="alt" /></li>
+                    <li><img src="img/dummies/slides/03_thumb.jpg" alt="alt" /></li>
+                    <li><img src="img/dummies/slides/04_thumb.jpg" alt="alt" /></li>
+                    <li><img src="img/dummies/slides/05_thumb.jpg" alt="alt" /></li>
+                    <li><img src="img/dummies/slides/06_thumb.jpg" alt="alt" /></li>
+                    <li><img src="img/dummies/slides/07_thumb.jpg" alt="alt" /></li>
+                </ul>
+            </div>
+            <div class="button-next">Next</div>
+            <div  class="button-previous">Previous</div>
+            <!-- REMOVED TILL FIXED <div class="button-control"><span>STOP</span></div> -->
+        </div>
+        <!-- slider nav -->
+
+
+
+    </div>
+    <!-- ENDS SLIDER -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <div class="container-wrapper">
 
@@ -48,7 +213,15 @@
                 {% block content %}
 
                     <div class="description-wrapper">
-                        Описание
+                        Сервис, оказывающий услугу добровольной сертификации интернет предпринимателей по обращению,
+                        как потребителя, так и магазина. С размещением подробной проверенной информации
+                        о предпринимателе взятой из интернета, фактической проверки и результатах сертификации
+                        на нашем ресурсе. Дополнительные возможности получают в личном кабинете как потребители
+                        так и предприниматели ( рекомендации , отзывы, предложения в обмен на скидки, бонусы и призы)
+                        Оказание консультаций предпринимателю и потребителю в урегулировании споров
+                        связанных с торговлей. Увеличение % лояльных клиентов в Интернет-торговле, выявление и борьба
+                        с мошенниками и недобросовестными продавцами в интернете. Помощь в развитии и продвижению малому
+                        и среднему бизнесу, продающему качественные услуги и товары.
                     </div>
 
                     <div class="video-wrapper">

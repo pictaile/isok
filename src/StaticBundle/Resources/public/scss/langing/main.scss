@@ -4,17 +4,19 @@
   min-height: calc(100% - 60px);
 }
 
+.logo-wrapper {
+  img {
+    width: 100px;
+  }
+}
+
 .header-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 20px;
   border-bottom: 1px solid $color-purple;
-  .logo-wrapper {
-    img {
-      width: 150px;
-    }
-  }
+
 
   .search-wrapper {
     width: 300px;

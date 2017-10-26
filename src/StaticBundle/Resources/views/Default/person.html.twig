@@ -14,7 +14,91 @@
 
 
 {% block content %}
-    222
+    <div class="info">
+        <p>Заголовок</p>
+        <p>Подробное описание функционала сервиса для клиента.</p>
+    </div>
+    <div class="faq" style="border: 1px solid grey; border-radius: 20px; padding: 10px; margin-top: 30px;">
+        <p>ЧаВо?</p>
+        <p><a>Инфо 1</a></p>
+        <p><a>Инфо 2</a></p>
+        <p><a>Инфо 3</a></p>
+    </div>
+    <div class="container-fluid rquestion" style="margin-top: 30px;">
+        <p>Опрос :</p>
+        <form action="/app_dev.php/client/questions/" method="post">
+            <div class="row">
+                <p>Вопрос номер 1:</p>
+                <div class="col-md-4">
+                    <label for="q1" class="custom-label">Oтвет1</label>
+                    <input id="q1" type="radio" name="questions1" value="1" checked>
+                </div>
+                <div class="col-md-4">
+                    <label for="q2" class="custom-label">Ответ2</label>
+                    <input id="q2" type="radio" name="questions1" value="2" >
+                </div>
+                <div class="col-md-4">
+                    <label for="q3" class="custom-label">Ответ3</label>
+                    <input id="q3" type="radio" name="questions1" value="3" >
+                </div>
+            </div>
+
+            <div class="row">
+                <p>Вопрос номер 2:</p>
+                <div class="col-md-4">
+                    <label for="q4" class="custom-label">Oтвет1</label>
+                    <input id="q4" type="radio" name="questions2" value="1" checked>
+                </div>
+
+                <div class="col-md-4">
+                    <label for="q5" class="custom-label">Ответ2</label>
+                    <input id="q5" type="radio" name="questions2" value="2" >
+                </div>
+                <div class="col-md-4">
+                    <label for="q6" class="custom-label">Ответ3</label>
+                    <input id="q6" type="radio" name="questions2" value="3" >
+                </div>
+            </div>
+
+            <div class="row">
+                <p>Вопрос номер 3:</p>
+                <div class="col-md-4">
+                    <label for="q7" class="custom-label">Oтвет1</label>
+                    <input id="q7" type="radio" name="questions3" value="1" checked>
+                </div>
+
+                <div class="col-md-4">
+                    <label for="q8" class="custom-label">Ответ2</label>
+                    <input id="q8" type="radio" name="questions3" value="2" >
+                </div>
+                <div class="col-md-4">
+                    <label for="q9" class="custom-label">Ответ3</label>
+                    <input id="q9" type="radio" name="questions3" value="3" >
+                </div>
+            </div>
+            <button class="btn btn-default" >Отправить</button>
+        </form>
+    </div>
+
+    <div class="container-fluid request" style="border-top: 1px solid grey; margin-top: 30px; margin-bottom: 50px;">
+        <p>Форма подачи заявки на партнерство: </p>
+        <form class="form-group" action="/app_dev.php/client/claim/" method="post">
+            <p>Тип заявки:</p>
+            <div class="radio">
+                <label for="ok" class="radio-inline">Отзыв</label>
+                <input id="ok" type="radio" name="questions3" value="1" checked>
+                <label for="notok" class="radio-inline">Жалоба</label>
+                <input id="notok" type="radio" name="questions3" value="2" >
+            </div>
+
+            <label >Ссылка на интернет-магазин: </label>
+            <input class="form-control" type="text" placeholder="http://site.com" required>
+            <label >Текст заявки: </label>
+            <textarea class="form-control" rows="3" placeholder="Отзыв\Жалоба" required></textarea>
+            <button class="btn btn-default" >Отправить</button>
+        </form>
+    </div>
+
 {% endblock %}
 
 
